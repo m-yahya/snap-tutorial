@@ -4,7 +4,7 @@ import atexit
 import toml
 
 
-import olibox_pkg as pkg
+import olibox_core.olibox_core.olibox_pkg as pkg
 
 
 def init():
