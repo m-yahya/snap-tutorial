@@ -12,8 +12,10 @@ def init():
 
 
 def print_user():
+    test = 'This is test var'
     user = pkg.get_user()
-    print(user)
+    print(f'This is test print of {test}')
+    print(f'this is {user}')
 
 @atexit.register
 def main():
