@@ -1,5 +1,5 @@
 
-
+import time
 from .environments import *
 
 
@@ -9,6 +9,7 @@ from .environments import *
 
 
 def get_user():
+    time.sleep(30)
     print(f'this is working{name}')
     n = name 
     a = age
