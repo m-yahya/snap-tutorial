@@ -24,5 +24,5 @@ def init(name,
     parsed_config = toml.loads(config)
     formatted_config = toml.dumps(parsed_config)
 
-    with open(snap_userdata + 'config.toml', 'w') as f:
+    with open(snap_userdata + '/config.toml', 'w') as f:
         f.write(formatted_config)

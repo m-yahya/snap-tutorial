@@ -4,8 +4,8 @@ import toml
 
 snap_userdata = os.environ['SNAP_USER_DATA']
 
-if os.path.isfile(snap_userdata + 'config.toml'):
-    f = toml.load(snap_userdata + 'config.toml')
+if os.path.isfile(snap_userdata + '/config.toml'):
+    f = toml.load(snap_userdata + '/config.toml')
 
     items = f.keys()
     unique_dict = {}
