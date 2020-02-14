@@ -17,6 +17,12 @@ parts:
     plugin: python
     #source: .
     requirements: ['requirements.txt']
+  launcher:
+    plugin: nil
+    source: .
+    override-build: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin
+      cp -av mylauncher.sh $SNAPCRAFT_PART_INSTALL/bin/
 
 apps:
   olibox-core:
