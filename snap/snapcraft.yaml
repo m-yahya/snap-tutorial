@@ -8,7 +8,7 @@ description: |
     and publish this data to mqtt broker.
     This utility is particularly useful for Oli box.
 grade: devel
-confinement: devmode
+confinement: strict
 
 parts:
   olibox-core:
@@ -21,3 +21,5 @@ parts:
 apps:
   olibox-core:
     command: bin/olibox-core
+  myapp:
+    command: bin/mylauncher.sh myapp
