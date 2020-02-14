@@ -1,6 +1,8 @@
 import click
 import toml
+import os
 
+snap_userdata = os.environ['SNAP_USER_DATA']
 
 @click.command()
 @click.option('--name', prompt='enter your name', help='enter user name')
@@ -22,5 +24,5 @@ def init(name,
     parsed_config = toml.loads(config)
     formatted_config = toml.dumps(parsed_config)
 
-    with open('config.toml', 'w') as f:
+    with open(snap_userdata + 'config.toml', 'w') as f:
         f.write(formatted_config)
