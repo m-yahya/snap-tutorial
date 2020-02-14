@@ -26,6 +26,4 @@ parts:
 
 apps:
   olibox-core:
-    command: bin/olibox-core
-  myapp:
-    command: bin/mylauncher.sh myapp
+    command: mylauncher.sh olibox-core
