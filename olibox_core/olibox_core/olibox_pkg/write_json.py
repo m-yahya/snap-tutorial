@@ -10,16 +10,16 @@ def write_values(file, new_data):
     """
     The function uses json.dump method to write the data object to a file.
     """
-
-    if os.path.isfile(f'{snap_userdata}/{file}'):
-        with open(f'{snap_userdata}/{file}') as f:
+    file_to_write = os.path.join(snap_userdata, '/', file)
+    if os.path.isfile(file_to_write):
+        with open(file_to_write) as f:
             data = json.load(f)
 
         data.update(new_data)
-        with open(f'{snap_userdata}/{file}', 'w+', encoding='utf-8') as f:
+        with open(file_to_write, 'w+', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
     else:
-        with open(f'{snap_userdata}/{file}', 'w+', encoding='utf-8') as f:
+        with open(file_to_write, 'w+', encoding='utf-8') as f:
             json.dump(new_data, f, ensure_ascii=False, indent=4)
 
 
