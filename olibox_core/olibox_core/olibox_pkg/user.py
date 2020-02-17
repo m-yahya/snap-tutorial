@@ -16,5 +16,7 @@ def get_user():
     n = name 
     a = age
 
-    write_values('power-data.json', 5)
+    payload_power = {'activePower_demand': age}
+    write_values('power-data.json', payload_power)
+
     return(n, a)
