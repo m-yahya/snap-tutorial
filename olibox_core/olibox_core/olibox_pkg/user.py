@@ -16,5 +16,5 @@ def get_user():
     n = name 
     a = age
 
-    write_values(f'{snap_userdata}/power-data.json', 5)
+    write_values('power-data.json', 5)
     return(n, a)
